@@ -1,11 +1,9 @@
 "use strict";
 const telProgForm = document.querySelector("[data-prog");
-const formInputNone = document.querySelector(".form-block__input-none");
 const selected = document.querySelector(".form-block__selected");
 const optionContainer = document.querySelector(
   ".form-block__options-container"
 );
-const optionList = document.querySelectorAll(".form-block__option");
 
 let salom = document.querySelector("#telegram");
 
@@ -23,26 +21,6 @@ function handleTabletChange(e) {
 }
 mediaQuery.addListener(handleTabletChange);
 handleTabletChange(mediaQuery);
-
-formInputNone.value = selected.querySelectorAll("span")[1].innerText;
-
-selected.addEventListener("click", () => {
-  optionContainer.classList.toggle("active");
-  selected.classList.toggle("active");
-});
-
-optionList.forEach((o) => {
-  o.addEventListener("click", () => {
-    let selectedCope = selected.innerHTML;
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    o.querySelector("label").innerHTML = selectedCope;
-    formInputNone.value = selected.querySelectorAll("span")[1].innerText;
-
-    optionContainer.classList.remove("active");
-    selected.classList.remove("active");
-    telProgForm.innerText = selected.querySelectorAll("span")[1].innerText;
-  });
-});
 
 const tellFormBlock = document.querySelectorAll(".form-block__input_tell");
 
