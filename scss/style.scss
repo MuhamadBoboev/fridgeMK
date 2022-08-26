@@ -100,6 +100,11 @@ $fontTTNormsProBold: "TT Norms Pro Bold";
   padding: 25px 0;
 }
 .pro__price {
+  td:first-child {
+    p {
+      min-width: max-content;
+    }
+  }
   p {
     padding: 10px 15px;
   }
@@ -128,4 +133,11 @@ $fontTTNormsProBold: "TT Norms Pro Bold";
 }
 .whatsLink {
   color: #72b211;
+}
+
+.pro_container {
+  padding: 0;
+}
+.main-block__problem-text {
+  margin: 0;
 }

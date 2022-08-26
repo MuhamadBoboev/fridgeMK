@@ -2118,6 +2118,11 @@ footer {
   padding: 25px 0;
 }
 
+.pro__price td:first-child p {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
 .pro__price p {
   padding: 10px 15px;
 }
@@ -2153,4 +2158,12 @@ footer {
 
 .whatsLink {
   color: #72b211;
+}
+
+.pro_container {
+  padding: 0;
+}
+
+.main-block__problem-text {
+  margin: 0;
 }
