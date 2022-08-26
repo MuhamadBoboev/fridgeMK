@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "TT Norms Pro Regular";
+  src: local("TT Norms Pro Regular"), local("TT-Norms-Pro-Regular"),
+    url("../fonts/TTNormsPro-Regular.woff2") format("woff2"),
+    url("../fonts/TTNormsPro-Regular.woff") format("woff"),
+    url("../fonts/TTNormsPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Norms Pro Bold";
+  src: local("TT Norms Pro Bold"), local("TT-Norms-Pro-Bold"),
+    url("../fonts/TTNormsPro-Bold.woff2") format("woff2"),
+    url("../fonts/TTNormsPro-Bold.woff") format("woff"),
+    url("../fonts/TTNormsPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+body {
+  max-width: 1920px;
+  // height: 100%;
+  font-family: "TT Norms Pro Regular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  margin: 0 auto;
+  padding: 0;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+/* ********** container ************ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 0 1;
+}
+._container {
+  max-width: 1296px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.display-none {
+  display: none;
+}
+/* element */
+.button {
+}
+/* ************** mixin ***************** */
+$fontTTNormsProRegular: "TT Norms Pro Regular";
+$fontTTNormsProBold: "TT Norms Pro Bold";
+@mixin font($family, $size) {
+  font-family: $family;
+  font-size: $size;
+  line-height: 130%;
+}
+/* ************** import **************** */
+
+/* ************** header **************** */
+@import "header";
+
+/* ************** pages ***************** */
+.pages {
+  flex: 1 1 auto;
+}
+@import "main-block";
+@import "form-block";
+@import "page__advantage";
+@import "page__suggestions";
+@import "page__service-order";
+/************* main-block **************** */
+@import "footer";
+@import "popup";
+.pro {
+  margin-top: 50px;
+}
+.pro__items {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+  .pro__item:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+}
+.pro__item-body {
+  padding: 15px 0;
+}
+.pro__img-b {
+  padding: 25px 0;
+}
+.pro__price {
+  p {
+    padding: 10px 15px;
+  }
+}
+.pro__item-body {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+}
+.swiper-slide {
+  img {
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+.main-block__img-man {
+  align-items: center;
+  img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+.main-block__subtitle__p {
+  // max-width: 700px;
+}
+.whatsLink {
+  color: #72b211;
+}

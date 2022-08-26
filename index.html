@@ -1,12 +1,1494 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="shortcut icon" href="img/logo.svg" />
+    <title>Холодильники МИЭТ</title>
   </head>
+
   <body>
-    <h1>Мунис</h1>
+    <svg display="none">
+      <symbol
+        id="telegram"
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25Z"
+          fill="#1C8ADB"
+        />
+        <path
+          d="M19.3096 6.46306L19.0511 6.55681L5.01987 11.6122C4.92044 11.643 4.83402 11.7058 4.77415 11.791C4.71429 11.8761 4.68437 11.9787 4.68908 12.0827C4.69379 12.1866 4.73287 12.2861 4.80019 12.3655C4.8675 12.4449 4.95926 12.4997 5.06106 12.5213L8.69316 13.5156L9.37072 15.5043L10.0483 17.4929C10.0872 17.5904 10.1493 17.6769 10.2293 17.7449C10.3092 17.8129 10.4046 17.8604 10.507 17.8832C10.6095 17.906 10.716 17.9035 10.8172 17.8758C10.9185 17.8482 11.0114 17.7962 11.088 17.7244L12.9645 15.9517L16.6491 18.4503C17.0994 18.7571 17.7415 18.5298 17.8565 18.0241L20.2969 7.24147C20.4162 6.70738 19.8537 6.26846 19.3096 6.46306ZM17.5184 8.85653L11.179 14.0383L10.8807 14.2827C10.8151 14.3346 10.7724 14.41 10.7613 14.4929L10.6946 15.044L10.5113 16.5923C10.5129 16.6112 10.5068 16.6298 10.4946 16.6442C10.4823 16.6586 10.4648 16.6675 10.446 16.669C10.4272 16.6705 10.4085 16.6645 10.3941 16.6522C10.3797 16.64 10.3708 16.6225 10.3693 16.6037L9.85367 15.0568L9.321 13.473C9.29848 13.4018 9.30147 13.325 9.32947 13.2558C9.35747 13.1865 9.40872 13.1293 9.47441 13.0937L16.071 9.31249L17.3125 8.60227C17.4929 8.49715 17.6775 8.72585 17.5184 8.85653Z"
+          fill="white"
+        />
+      </symbol>
+      <symbol
+        id="whatsapp"
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25Z"
+          fill="#29A71A"
+        />
+        <path
+          d="M18.0114 6.98864C16.7108 5.67514 14.9838 4.86962 13.1416 4.71736C11.2995 4.56511 9.4636 5.07615 7.96507 6.1583C6.46655 7.24045 5.40406 8.82248 4.96924 10.619C4.53442 12.4156 4.75591 14.3083 5.59375 15.956L4.77131 19.9489C4.76277 19.9886 4.76253 20.0297 4.7706 20.0695C4.77866 20.1094 4.79486 20.1471 4.81818 20.1804C4.85234 20.2309 4.90111 20.2698 4.95796 20.2919C5.01482 20.314 5.07705 20.3182 5.13636 20.304L9.04972 19.3764C10.6927 20.1931 12.5721 20.4003 14.3536 19.9613C16.135 19.5223 17.7029 18.4655 18.7783 16.9789C19.8537 15.4924 20.3669 13.6725 20.2264 11.8432C20.086 10.0138 19.3011 8.2936 18.0114 6.98864ZM16.7912 16.7273C15.8914 17.6246 14.7327 18.2169 13.4784 18.4208C12.2241 18.6246 10.9374 18.4298 9.79972 17.8636L9.25426 17.5938L6.85511 18.1619L6.86222 18.1321L7.35938 15.7173L7.09233 15.1903C6.51102 14.0487 6.30596 12.7523 6.50652 11.487C6.70707 10.2217 7.30296 9.05225 8.20881 8.14631C9.34703 7.00844 10.8906 6.36923 12.5 6.36923C14.1094 6.36923 15.653 7.00844 16.7912 8.14631C16.8009 8.15742 16.8113 8.16787 16.8224 8.17756C17.9466 9.31836 18.5741 10.8573 18.5682 12.4589C18.5624 14.0604 17.9236 15.5947 16.7912 16.7273Z"
+          fill="white"
+        />
+        <path
+          d="M16.5781 14.956C16.2841 15.419 15.8196 15.9858 15.2358 16.1264C14.2131 16.3736 12.6435 16.1349 10.6904 14.3139L10.6662 14.2926C8.94888 12.7003 8.50286 11.375 8.61081 10.3239C8.67047 9.72727 9.16763 9.1875 9.58666 8.83522C9.65291 8.77868 9.73147 8.73843 9.81606 8.71767C9.90065 8.69692 9.98892 8.69625 10.0738 8.71572C10.1587 8.73518 10.2379 8.77424 10.305 8.82977C10.3721 8.88529 10.4252 8.95575 10.4602 9.03551L11.0923 10.456C11.1334 10.5481 11.1486 10.6496 11.1364 10.7497C11.1241 10.8498 11.0848 10.9447 11.0227 11.0241L10.7031 11.4389C10.6346 11.5246 10.5932 11.6288 10.5843 11.7381C10.5755 11.8475 10.5995 11.957 10.6534 12.0525C10.8324 12.3665 11.2614 12.8281 11.7372 13.2557C12.2713 13.7386 12.8637 14.1804 13.2387 14.331C13.339 14.372 13.4493 14.382 13.5554 14.3597C13.6615 14.3374 13.7584 14.2839 13.8338 14.206L14.2046 13.8324C14.2761 13.7618 14.3651 13.7115 14.4624 13.6866C14.5597 13.6616 14.6619 13.6629 14.7585 13.6903L16.26 14.1165C16.3428 14.1419 16.4187 14.1859 16.4819 14.2451C16.5451 14.3044 16.5939 14.3773 16.6246 14.4583C16.6553 14.5393 16.6671 14.6263 16.659 14.7125C16.651 14.7988 16.6233 14.882 16.5781 14.956Z"
+          fill="white"
+        />
+      </symbol>
+      <symbol
+        id="viber"
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25Z"
+          fill="#6F3FAA"
+        />
+        <path
+          d="M19.7202 8.4446V8.42613C19.5525 7.74715 19.115 7.04545 18.5412 6.45454C17.8707 5.76136 17.017 5.21732 16.2017 5.04119H16.1846C13.7532 4.57528 11.2553 4.57528 8.82384 5.04119H8.8068C7.29259 5.36931 5.64913 6.9517 5.28265 8.42613V8.4446C4.83238 10.4887 4.83238 12.6064 5.28265 14.6506V14.6676C5.54401 15.7187 6.4531 16.8239 7.5014 17.4915C7.84375 17.7146 8.21641 17.8873 8.60793 18.0043V19.6491C8.60849 19.7806 8.64817 19.9089 8.72192 20.0177C8.79567 20.1265 8.90015 20.2109 9.02204 20.2602C9.14394 20.3094 9.27773 20.3212 9.40636 20.2941C9.53499 20.267 9.65263 20.2022 9.7443 20.108L11.4119 18.375C11.7727 18.3949 12.1363 18.4062 12.4971 18.4062C13.7322 18.4059 14.9645 18.2889 16.1775 18.0568H16.1946C17.7045 17.7273 19.3494 16.1449 19.7131 14.6705V14.6534C20.1661 12.6089 20.1685 10.4902 19.7202 8.4446ZM18.4006 14.3466C18.1562 15.3082 16.9091 16.5057 15.9162 16.7258C14.6265 16.9729 13.314 17.08 12.0014 17.0455C11.9886 17.0447 11.9758 17.0468 11.964 17.0517C11.9522 17.0567 11.9417 17.0642 11.9332 17.0739L10.7159 18.3239L9.42043 19.652C9.39971 19.6739 9.37289 19.6891 9.34344 19.6956C9.314 19.702 9.28328 19.6995 9.25527 19.6884C9.22726 19.6772 9.20326 19.6579 9.18636 19.6329C9.16946 19.6079 9.16045 19.5784 9.16049 19.5483V16.821C9.16052 16.7991 9.15287 16.7778 9.13885 16.761C9.12484 16.7441 9.10535 16.7327 9.08379 16.7287C8.87669 16.6795 8.67703 16.6031 8.49004 16.5014C7.64629 16.0511 6.79543 15.1278 6.59941 14.3466C6.19339 12.4988 6.19339 10.585 6.59941 8.73721C6.84231 7.77982 8.09657 6.58522 9.08237 6.36363C11.3398 5.93169 13.6587 5.93169 15.9162 6.36363C16.4631 6.48579 17.0881 6.90198 17.5767 7.41335C17.9787 7.82954 18.2869 8.30965 18.4006 8.74147C18.806 10.5879 18.806 12.5002 18.4006 14.3466Z"
+          fill="white"
+        />
+        <path
+          d="M15.9517 14.4886C15.7671 14.9098 15.4498 15.259 15.0483 15.4829C14.9223 15.5364 14.7915 15.5778 14.6576 15.6065C14.5056 15.5611 14.3608 15.5298 14.2315 15.4744C13.1547 15.0554 12.1524 14.466 11.2627 13.7287C10.9985 13.5033 10.7503 13.2598 10.5198 13C9.95087 12.3447 9.47306 11.6156 9.09939 10.8324C8.91757 10.4616 8.76416 10.0781 8.60791 9.69601C8.46587 9.348 8.6761 8.98578 8.89201 8.72584C9.10335 8.48476 9.3633 8.29113 9.65479 8.15766C9.75736 8.10611 9.87474 8.09209 9.98657 8.11803C10.0984 8.14398 10.1976 8.20825 10.267 8.2997C10.6299 8.70745 10.9498 9.15157 11.2216 9.62499C11.3072 9.76264 11.3365 9.92798 11.3034 10.0867C11.2703 10.2454 11.1775 10.3852 11.044 10.4773C10.973 10.527 10.902 10.5838 10.8409 10.6392C10.7807 10.6838 10.7287 10.7386 10.6875 10.8011C10.6518 10.8596 10.6302 10.9256 10.6243 10.9939C10.6184 11.0621 10.6284 11.1308 10.6534 11.1946C10.9275 11.9488 11.3437 12.5781 11.9659 13.0199C12.1764 13.1688 12.4033 13.2931 12.642 13.3906C12.7979 13.4754 12.9731 13.5185 13.1505 13.5156C13.4602 13.4787 13.5625 13.1364 13.7784 12.9602C13.8775 12.8791 14.0001 12.8321 14.1281 12.8262C14.256 12.8203 14.3825 12.8558 14.4886 12.9275C14.7187 13.0696 14.9403 13.2301 15.1619 13.3864C15.3811 13.5359 15.5921 13.6971 15.794 13.8693C15.8884 13.9379 15.9559 14.0374 15.9847 14.1505C16.0135 14.2636 16.0018 14.3832 15.9517 14.4886Z"
+          fill="white"
+        />
+        <path
+          d="M12.9076 7.6818H12.7258C12.7841 7.67897 12.8451 7.6818 12.9076 7.6818Z"
+          fill="white"
+        />
+        <path
+          d="M16.0511 11.9389C15.9091 11.9389 15.8395 11.8182 15.8295 11.6861C15.8111 11.4261 15.7969 11.1648 15.7613 10.9062C15.7 10.4701 15.548 10.0515 15.3153 9.67755C15.0761 9.28794 14.7579 8.95287 14.3811 8.694C14.0042 8.43512 13.5773 8.25821 13.1278 8.17471C12.9233 8.13778 12.7145 8.12925 12.5085 8.10795C12.3778 8.09374 12.206 8.08522 12.1775 7.92329C12.1733 7.89184 12.1758 7.85984 12.1849 7.82944C12.194 7.79904 12.2095 7.77094 12.2304 7.747C12.2512 7.72307 12.2769 7.70386 12.3058 7.69066C12.3346 7.67746 12.366 7.67057 12.3977 7.67045C12.4318 7.66849 12.4659 7.66849 12.5 7.67045C13.1209 7.6757 13.7309 7.834 14.276 8.13133C14.8211 8.42865 15.2844 8.85582 15.625 9.37499C15.8938 9.79346 16.0764 10.2614 16.1619 10.7514C16.2159 11.0582 16.2358 11.3736 16.2599 11.6861C16.2648 11.7167 16.2631 11.748 16.2549 11.7779C16.2467 11.8078 16.2323 11.8357 16.2125 11.8596C16.1928 11.8835 16.1682 11.9029 16.1404 11.9166C16.1125 11.9303 16.0821 11.9379 16.0511 11.9389Z"
+          fill="white"
+        />
+        <path
+          d="M15.2827 11.2756C15.2819 11.3177 15.2761 11.3597 15.2656 11.4006C15.2532 11.4416 15.2284 11.4779 15.1947 11.5044C15.161 11.5309 15.1199 11.5463 15.0771 11.5487C15.0342 11.551 14.9917 11.5401 14.9553 11.5174C14.9189 11.4947 14.8903 11.4613 14.8736 11.4219C14.8579 11.3645 14.8507 11.3052 14.8523 11.2457C14.8556 10.928 14.7927 10.6131 14.6676 10.321C14.6392 10.2585 14.6079 10.1946 14.5724 10.1335C14.3691 9.78305 14.0673 9.50003 13.7045 9.3196C13.4857 9.21626 13.2532 9.14452 13.0142 9.10653C12.9091 9.08948 12.804 9.07954 12.6988 9.06534C12.6715 9.06396 12.6447 9.05699 12.6201 9.04485C12.5956 9.03271 12.5738 9.01567 12.5561 8.99476C12.5384 8.97386 12.5251 8.94955 12.5172 8.92333C12.5093 8.89711 12.5068 8.86954 12.5099 8.84232C12.5099 8.81449 12.5158 8.78697 12.5272 8.76157C12.5386 8.73618 12.5553 8.71348 12.5761 8.69497C12.5969 8.67646 12.6213 8.66255 12.6479 8.65416C12.6744 8.64578 12.7024 8.6431 12.7301 8.6463C13.1472 8.6624 13.5558 8.76903 13.9275 8.9588C14.3815 9.18725 14.7518 9.5531 14.9858 10.0043C15.1175 10.2677 15.2058 10.5507 15.2471 10.8423C15.2548 10.8804 15.2605 10.9188 15.2642 10.9574C15.2713 11.0426 15.2741 11.1278 15.2812 11.2329C15.2812 11.2429 15.2827 11.2557 15.2827 11.2756Z"
+          fill="white"
+        />
+        <path
+          d="M14.3096 11.0795C14.3016 11.1156 14.283 11.1483 14.2561 11.1736C14.2293 11.199 14.1955 11.2157 14.1591 11.2216H14.1278C14.0813 11.2246 14.035 11.2124 13.9961 11.1867C13.9571 11.1611 13.9276 11.1235 13.9119 11.0795C13.9031 11.0562 13.8973 11.0319 13.8949 11.0071C13.8874 10.9115 13.8732 10.8166 13.8522 10.723C13.81 10.5336 13.7024 10.3651 13.5483 10.2472C13.4738 10.1937 13.3907 10.1533 13.3025 10.1278C13.1903 10.0952 13.0724 10.1037 12.9616 10.0767C12.9069 10.067 12.8582 10.036 12.8262 9.99046C12.7943 9.94493 12.7817 9.8886 12.7912 9.8338C12.8017 9.78131 12.8311 9.73447 12.8737 9.70205C12.9163 9.66963 12.9693 9.65385 13.0227 9.65767C13.6733 9.70454 14.1591 10.017 14.2841 10.7145C14.2969 10.7792 14.3059 10.8447 14.3111 10.9105C14.319 10.9666 14.3185 11.0236 14.3096 11.0795Z"
+          fill="white"
+        />
+      </symbol>
+      <symbol
+        id="tell"
+        width="19"
+        height="19"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.7719 14.125C18.7206 14.0844 15 11.4025 13.9787 11.595C13.4912 11.6812 13.2125 12.0138 12.6531 12.6794C12.5631 12.7869 12.3469 13.0444 12.1788 13.2275C11.8252 13.1122 11.4804 12.9718 11.1469 12.8075C9.42533 11.9694 8.03437 10.5784 7.19625 8.85687C7.03179 8.52339 6.89143 8.17855 6.77625 7.825C6.96 7.65625 7.2175 7.44 7.3275 7.3475C7.99 6.79125 8.32312 6.5125 8.40938 6.02375C8.58625 5.01125 5.90625 1.265 5.87812 1.23125C5.75653 1.05754 5.59784 0.913039 5.41355 0.808189C5.22925 0.70334 5.02395 0.640768 4.8125 0.625C3.72625 0.625 0.625 4.64813 0.625 5.32562C0.625 5.365 0.681875 9.3675 5.6175 14.3881C10.6331 19.3181 14.635 19.375 14.6744 19.375C15.3525 19.375 19.375 16.2737 19.375 15.1875C19.3594 14.9768 19.2972 14.7722 19.1929 14.5884C19.0886 14.4047 18.9448 14.2464 18.7719 14.125Z"
+          fill="#DF493D"
+        />
+      </symbol>
+      <symbol
+        id="tell-number-2"
+        width="25"
+        height="25"
+        viewBox="0 0 41 41"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20.5" cy="20.5" r="20.5" fill="#EE2E24" />
+        <path
+          d="M29.1789 24.5446C29.1278 24.5041 25.4172 21.8294 24.3987 22.0214C23.9125 22.1074 23.6345 22.439 23.0767 23.1029C22.9869 23.2101 22.7712 23.4669 22.6036 23.6495C22.251 23.5345 21.9071 23.3945 21.5745 23.2306C19.8576 22.3948 18.4704 21.0076 17.6345 19.2907C17.4705 18.9581 17.3306 18.6142 17.2157 18.2616C17.3989 18.0933 17.6557 17.8776 17.7654 17.7854C18.4261 17.2306 18.7584 16.9526 18.8444 16.4652C19.0208 15.4555 16.348 11.7193 16.32 11.6857C16.1987 11.5124 16.0405 11.3683 15.8567 11.2637C15.6729 11.1592 15.4681 11.0968 15.2572 11.0811C14.1739 11.0811 11.0811 15.0933 11.0811 15.769C11.0811 15.8082 11.1378 19.7999 16.0601 24.807C21.0621 29.7237 25.0532 29.7804 25.0925 29.7804C25.7688 29.7804 29.7804 26.6875 29.7804 25.6042C29.7648 25.3941 29.7028 25.19 29.5988 25.0067C29.4948 24.8235 29.3513 24.6656 29.1789 24.5446Z"
+          fill="white"
+        />
+      </symbol>
+    </svg>
+    <div class="wrapper">
+      <h1 class="visually-hidden">
+        Техническая поддержка и решение любых проблем с сайтами и
+        интернет-магазинами
+      </h1>
+      <header class="header">
+        <h2 class="visually-hidden">Шапка сайта</h2>
+        <div class="_container header-container">
+          <div class="header__left-section">
+            <div class="header__logo">
+              <a class="header__logo-img" href="index.html" target="_blank"
+                ><img src="img/logo.svg" height="60" width="89" alt="logo"
+              /></a>
+            </div>
+            <div class="header__about-company">
+              <p class="header__about-company__p">
+                <!-- <span
+                  class="header__about-company__text header__about-company__text__1"
+                  >Техническая поддержка</span
+                > -->
+                <!-- <br /> -->
+                <span
+                  class="header__about-company__text header__about-company__text__1"
+                  >Решение любых проблем</span
+                >
+                <br />
+                <span
+                  class="header__about-company__text header__about-company__text__2"
+                  >с бытовой техники :)</span
+                >
+                <br />
+              </p>
+            </div>
+          </div>
+
+          <div class="header__right-section">
+            <div class="header__write-to-us">
+              <div class="header__humen">
+                <img
+                  class="header__humen__img"
+                  src="img/am.jpg "
+                  height="45"
+                  width="45"
+                  alt="human"
+                />
+              </div>
+              <div class="header__messengers">
+                <p class="header__messengers__p"><span>Напишите мне</span></p>
+                <div class="header__messengers__flex">
+                  <a
+                    class="header__messengers__a__none"
+                    href="tel:+74951234567"
+                  >
+                    <svg
+                      class="header__icon header__icon-tell-number-2"
+                      style="width: 25; height: 25"
+                    >
+                      <use class="salom" xlink:href="#tell-number-2"></use>
+                    </svg>
+                  </a>
+
+                  <a
+                    class="header__messengers__a"
+                    href="tg://resolve?domain=boboevMM"
+                  >
+                    <svg
+                      class="header__icon header__icon-telegram"
+                      style="width: 25; height: 25"
+                    >
+                      <use xlink:href="#telegram"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="header__messengers__a"
+                    href="https://wa.me/%2B79169480428"
+                  >
+                    <svg
+                      class="header__icon header__icon-whatsapp"
+                      style="width: 25; height: 25"
+                    >
+                      <use xlink:href="#whatsapp"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="header__messengers__a"
+                    href="viber://chat?number=%2B79001234567"
+                  >
+                    <svg
+                      class="header__icon header__icon-viber"
+                      style="width: 25; height: 25"
+                    >
+                      <use xlink:href="#viber"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header__business-hours-telephone">
+              <p class="header__business-hours-telephone__p">
+                <span>Работаем пн-пт с 09:00 до 18:00</span><br />
+              </p>
+              <div class="header__tell">
+                <a href="tel:+79169480428">
+                  <svg class="header__tell-svg" style="width: 25; height: 25">
+                    <use xlink:href="#tell"></use>
+                  </svg>
+                  <span class="header__tell__number"
+                    >+7 (916) 948-04-28</span
+                  ></a
+                >
+              </div>
+            </div>
+            <button type="submit" class="button header__button">
+              Напишите в WhatsApp
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <page class="pages">
+        <section class="page__main-block">
+          <h2 class="visually-hidden">
+            Справимся с любыми вопросами и решим любую проблему связанную с 1С -
+            Битрикс
+          </h2>
+          <div class="main-block-container _container">
+            <div class="main-block__body">
+              <div class="main-block__about-us">
+                <h2 class="visually-hidden">Решение ваших проблем</h2>
+                <div class="main-block__title">
+                  <p class="main-block__title__p">
+                    Теряете деньги и <br />
+                    продукты из-за плохой <br />
+                    работы холодильника?
+                  </p>
+                  <div class="main-block__img-man main-block__img-man__none">
+                    <img src="img/home.jpg_large" alt="мужик с ноутом" />
+                  </div>
+                </div>
+                <div class="main-block__subtitle">
+                  <p class="main-block__subtitle__p">
+                    Если холодильник вам понравился, <br />
+                    то - можете мне позвонить или же написать в
+                    <a class="whatLink" href="https://wa.me/%2B79169480428">
+                      <strong class="main-block__subtitle__strong"
+                        >WhatsApp</strong
+                      >
+                    </a>
+                  </p>
+                </div>
+
+                <div class="display-none">
+                  <svg display="none">
+                    <symbol
+                      id="main-block__icon"
+                      width="27"
+                      height="20"
+                      viewBox="0 0 27 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.9172 9.3372L18.4128 0.832859C18.2799 0.706554 18.1133 0.621506 17.933 0.588022C17.7527 0.554539 17.5666 0.574058 17.3973 0.644213C17.2279 0.714367 17.0825 0.832146 16.9787 0.983275C16.8749 1.1344 16.8172 1.31239 16.8125 1.49567V5.31251H1.8125C1.56386 5.31251 1.3254 5.41129 1.14959 5.5871C0.973772 5.76292 0.875 6.00137 0.875 6.25001V13.75C0.875 13.9987 0.973772 14.2371 1.14959 14.4129C1.3254 14.5887 1.56386 14.6875 1.8125 14.6875H16.8125V18.5044C16.9255 19.1154 17.238 19.4279 17.75 19.4419C17.8731 19.4419 17.995 19.4176 18.1088 19.3705C18.2225 19.3234 18.3258 19.2543 18.4128 19.1672L26.9172 10.6628C27.0929 10.487 27.1916 10.2486 27.1916 10C27.1916 9.75142 27.0929 9.51301 26.9172 9.3372Z"
+                        fill="#FF3C38"
+                      />
+                    </symbol>
+                  </svg>
+                </div>
+
+                <div class="main-block__problems">
+                  <div class="main-block__problem">
+                    <div class="main-block">
+                      <svg
+                        class="main-block__icon"
+                        style="width: 27; height: 25"
+                      >
+                        <use xlink:href="#main-block__icon"></use>
+                      </svg>
+                    </div>
+                    <div class="main-block__problem-text">
+                      <span>Всё находится в общаге</span>
+                    </div>
+                  </div>
+                  <div class="main-block__problem">
+                    <div class="main-block">
+                      <svg
+                        class="main-block__icon"
+                        style="width: 27; height: 25"
+                      >
+                        <use xlink:href="#main-block__icon"></use>
+                      </svg>
+                    </div>
+                    <div class="main-block__problem-text">
+                      <span>Во всех корпусах</span>
+                    </div>
+                  </div>
+                  <div class="main-block__problem">
+                    <div class="main-block">
+                      <svg
+                        class="main-block__icon"
+                        style="width: 27; height: 25"
+                      >
+                        <use xlink:href="#main-block__icon"></use>
+                      </svg>
+                    </div>
+                    <div class="main-block__problem-text">
+                      <span>Если понравился холодильник</span>
+                    </div>
+                  </div>
+                  <div class="main-block__problem">
+                    <div class="main-block">
+                      <svg
+                        class="main-block__icon"
+                        style="width: 27; height: 25"
+                      >
+                        <use xlink:href="#main-block__icon"></use>
+                      </svg>
+                    </div>
+
+                    <div class="main-block__problem-text">
+                      <span>То - напиши мне!</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-block__footer">
+                  <button type="submit" class="button main-block__button">
+                    холодильник :)
+                  </button>
+                </div>
+              </div>
+              <div class="main-block__img-man">
+                <img src="img/home.jpg_large" alt="мужик с ноутом" />
+              </div>
+            </div>
+            <div class="main-block__image">
+              <img src="img/main-block-fon.png" alt="просто фон" />
+            </div>
+          </div>
+        </section>
+        <section class="pro">
+          <div class="_container">
+            <div class="pro__swapper">
+              <div class="pro__items">
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">7_123</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">8000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">7 корпус, 123 комната</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_123.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_123_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_123_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">7_418</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">8000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">7 корпус, 418 комната</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_418.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_418_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_418_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">7_102</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">6000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">7 корпус, 102 комната</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_102.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_102-1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_102-2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_102_3.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">7_230</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">5000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">7 корпус, 230 комната</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_230.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_230_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_230_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/7_230_3.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">9_525</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">5000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">9 корпус, 525 комната</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_525.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_525_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_525_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">15_114</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">5000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">15 корпус, комната 114</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_114.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_114_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_114_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">9_322</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">4500р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">9 корпус, комната 322</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_322.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_322_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_322_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_322_3.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">9_230</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">4000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">
+                              9 корпус, 2 этаж, дальняя кухня
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_230.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_230_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_230_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">13_517</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">4000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">13 корпус, комната 517</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_517.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_517_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_517_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_517_3.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">13_135</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">4000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">13 корпус, комната 135</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_135.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_135_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/13_135_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">9_131</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">2500р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">9 корпус, комната 131</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_131.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_131_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_131_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/9_131_3.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pro__item">
+                  <div class="pro__item-body">
+                    <div class="pro__table-block">
+                      <table class="pro__info">
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Номер хол/ка:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">15_104</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Цена:
+                            </p>
+                          </td>
+                          <td><p class="pro__text-2">2000р</p></td>
+                        </tr>
+                        <tr class="pro__price">
+                          <td>
+                            <p class="main-block__problem-text pro__text-1">
+                              Где находиться :
+                            </p>
+                          </td>
+                          <td>
+                            <p class="pro__text-2">15 корпус, комната 104</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="pro__img-b">
+                      <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_104.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_104_1.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_104_2.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+
+                          <div class="swiper-slide">
+                            <img
+                              src="/img/fridges/15_104_3.jpg"
+                              style="width: 100%"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__advantage">
+          <h2 class="visually-hidden">Наши преимущество</h2>
+          <div class="_container advantage_container">
+            <div class="advantage__title">
+              <p class="advantage__p">
+                <span class="advantage__strong">
+                  Cамые удобные и выгодные<br />
+                </span>
+                условия сотрудничества
+              </p>
+            </div>
+            <div class="advantage__block">
+              <div class="advantage__causes">
+                <div class="advantage__cause__title">
+                  <p class="advantage__causes__title-text">
+                    У вас есть 4 причины выбрать именно нас
+                  </p>
+                </div>
+                <div class="advantage__causes__grid">
+                  <div class="advantage__causes__block">
+                    <div class="advantage__causes__icon">
+                      <img
+                        src="img/advantage1.svg"
+                        width="80"
+                        height="80"
+                        alt=""
+                      />
+                    </div>
+                    <div class="advantage__causes__block-text">
+                      <span class="advantage__causes__strong">
+                        Бережем время<br />
+                      </span>
+                      <span
+                        class="advantage__causes__text advantage__causes__text"
+                      >
+                        Никогда не тратим время на пустые слова
+                      </span>
+                    </div>
+                  </div>
+                  <div class="advantage__causes__block">
+                    <div class="advantage__causes__icon">
+                      <img
+                        src="img/advantage2.svg"
+                        width="80"
+                        height="80"
+                        alt="Работаем на результат"
+                      />
+                    </div>
+                    <div class="advantage__causes__block-text">
+                      <span class="advantage__causes__strong">
+                        Работаем на результат<br />
+                      </span>
+                      <span class="advantage__causes__text">
+                        Беру холодильники лично сам :)
+                      </span>
+                    </div>
+                  </div>
+                  <div class="advantage__causes__block">
+                    <div class="advantage__causes__icon">
+                      <img
+                        src="img/advantage3.svg"
+                        width="80"
+                        height="80"
+                        alt="Оценка стоимости"
+                      />
+                    </div>
+                    <div class="advantage__causes__block-text">
+                      <span class="advantage__causes__strong">
+                        Оценка холодильника<br />
+                      </span>
+                      <span class="advantage__causes__text">
+                        Стоимость нормальная
+                      </span>
+                    </div>
+                  </div>
+                  <div class="advantage__causes__block">
+                    <div class="advantage__causes__icon">
+                      <img
+                        src="img/advantage4.svg"
+                        width="80"
+                        height="80"
+                        alt="Удобный формат"
+                      />
+                    </div>
+                    <div class="advantage__causes__block-text">
+                      <span class="advantage__causes__strong">
+                        Удобный формат<br />
+                      </span>
+                      <span class="advantage__causes__text">
+                        Я могу связаться с вами в любом мессендджере
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="advantage__fon">
+              <img
+                src="img/advantage-fon.jpg"
+                width="1296"
+                height="574"
+                alt="мужык с ноутом(работает) "
+              />
+            </div>
+          </div>
+        </section>
+        <section class="page__suggestions">
+          <h2 class="visually-hidden">4-причины выбрать именно меня</h2>
+          <div class="_container container_suggestions">
+            <div class="suggestions__header-block">
+              <div class="suggestions__main-title">
+                <p class="suggestions__main-title__text">
+                  <span class="suggestions__main-title__strong"> Что еще </span>
+                  я могу Вам предложить?
+                </p>
+              </div>
+              <div class="suggestions__main-suptitle">
+                <p class="suggestions__main-suptitle__text">
+                  Я могу предложить дополнительные бытовые техники. И кратко
+                  здесь показываем неравнодушие,<br />
+                  прописываем ваши ценности, хотя причем тут ценности?
+                </p>
+              </div>
+            </div>
+            <div class="suggestions__grid">
+              <div class="suggestions__mini-block">
+                <div class="suggestions__mini-block__body">
+                  <p class="suggestions__mini-block__title">Микроволновка</p>
+                  <div class="suggestions__mini-block__suptitle-block">
+                    <p class="suggestions__mini-block__suptitle">
+                      Есть 4 штуки
+                    </p>
+                  </div>
+                  <button type="submit" class="button suggestions__button">
+                    Напишите мне в WhatsApp
+                  </button>
+                </div>
+                <div class="suggestions__block-flex__img">
+                  <div class="suggestions__block-img">
+                    <img
+                      src="img/suggestions1.png"
+                      width="154"
+                      height="194"
+                      alt="Оптимизация сайтов"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="suggestions__mini-block">
+                <div class="suggestions__mini-block__body">
+                  <p class="suggestions__mini-block__title">Роутер</p>
+                  <div class="suggestions__mini-block__suptitle-block">
+                    <p class="suggestions__mini-block__suptitle">
+                      Есть 4 штуки
+                    </p>
+                  </div>
+                  <button type="submit" class="button suggestions__button">
+                    Напишите мне в WhatsApp
+                  </button>
+                </div>
+                <div class="suggestions__block-flex__img">
+                  <div class="suggestions__block-img">
+                    <img
+                      src="img/suggestions2.png"
+                      width="154"
+                      height="194"
+                      alt="Интеграция с системами"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </page>
+
+      <footer class="footer">
+        <svg display="none">
+          <symbol
+            id="footerTelegram"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
+              fill="#1C8ADB"
+            />
+            <path
+              d="M30.8954 10.3408L30.4818 10.4908L8.0318 18.5795C7.87271 18.6287 7.73444 18.7293 7.63866 18.8655C7.54288 19.0017 7.495 19.1659 7.50254 19.3322C7.51008 19.4986 7.5726 19.6577 7.68031 19.7847C7.78802 19.9117 7.93482 19.9994 8.09771 20.034L13.9091 21.6249L14.9932 24.8067L16.0773 27.9885C16.1395 28.1445 16.2389 28.2829 16.3669 28.3918C16.4948 28.5006 16.6473 28.5766 16.8112 28.6131C16.9752 28.6496 17.1455 28.6455 17.3076 28.6013C17.4696 28.557 17.6183 28.4738 17.7409 28.359L20.7432 25.5226L26.6386 29.5204C27.3591 30.0113 28.3863 29.6476 28.5704 28.8385L32.475 11.5863C32.6659 10.7317 31.7659 10.0295 30.8954 10.3408ZM28.0295 14.1704L17.8863 22.4613L17.4091 22.8522C17.3042 22.9353 17.2358 23.0559 17.2182 23.1885L17.1113 24.0704L16.8182 26.5476C16.8206 26.5778 16.8109 26.6076 16.7913 26.6307C16.7717 26.6537 16.7438 26.668 16.7136 26.6704C16.6835 26.6728 16.6536 26.6631 16.6306 26.6435C16.6076 26.6239 16.5933 26.596 16.5909 26.5658L15.7659 24.0908L14.9136 21.5567C14.8776 21.4428 14.8824 21.3199 14.9272 21.2092C14.972 21.0984 15.054 21.0067 15.1591 20.9499L25.7136 14.8999L27.7 13.7636C27.9886 13.5954 28.2841 13.9613 28.0295 14.1704Z"
+              fill="white"
+            />
+          </symbol>
+          <symbol
+            id="footerWhatsapp"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
+              fill="#29A71A"
+            />
+            <path
+              d="M28.8182 11.1818C26.7374 9.08023 23.9741 7.79139 21.0267 7.54778C18.0792 7.30417 15.1418 8.12183 12.7442 9.85328C10.3465 11.5847 8.64654 14.116 7.95083 16.9904C7.25513 19.8649 7.60951 22.8934 8.95005 25.5295L7.63414 31.9182C7.62049 31.9818 7.6201 32.0475 7.633 32.1112C7.64591 32.175 7.67183 32.2354 7.70914 32.2886C7.7638 32.3695 7.84182 32.4317 7.93279 32.4671C8.02375 32.5024 8.12334 32.5091 8.21823 32.4864L14.4796 31.0023C17.1084 32.3089 20.1155 32.6405 22.9658 31.9381C25.8161 31.2356 28.3248 29.5448 30.0454 27.1663C31.766 24.7878 32.5871 21.876 32.3623 18.9491C32.1376 16.0221 30.8818 13.2698 28.8182 11.1818ZM26.866 26.7636C25.4262 28.1993 23.5723 29.147 21.5654 29.4732C19.5585 29.7994 17.4999 29.4876 15.6796 28.5818L14.8069 28.15L10.9682 29.0591L10.9796 29.0114L11.7751 25.1477L11.3478 24.3046C10.4177 22.4779 10.0896 20.4037 10.4105 18.3792C10.7314 16.3546 11.6848 14.4836 13.1341 13.0341C14.9553 11.2135 17.425 10.1908 20.0001 10.1908C22.5751 10.1908 25.0448 11.2135 26.866 13.0341C26.8815 13.0519 26.8982 13.0686 26.916 13.0841C28.7145 14.9094 29.7186 17.3717 29.7092 19.9342C29.6999 22.4967 28.6778 24.9516 26.866 26.7636Z"
+              fill="white"
+            />
+            <path
+              d="M26.525 23.9296C26.0546 24.6705 25.3114 25.5773 24.3773 25.8023C22.741 26.1978 20.2296 25.8159 17.1046 22.9023L17.066 22.8682C14.3182 20.3205 13.6046 18.2 13.7773 16.5182C13.8728 15.5637 14.6682 14.7 15.3387 14.1364C15.4447 14.0459 15.5704 13.9815 15.7057 13.9483C15.8411 13.9151 15.9823 13.9141 16.1181 13.9452C16.254 13.9763 16.3806 14.0388 16.488 14.1277C16.5953 14.2165 16.6804 14.3293 16.7364 14.4569L17.7478 16.7296C17.8135 16.8769 17.8379 17.0394 17.8182 17.1996C17.7986 17.3597 17.7358 17.5115 17.6364 17.6387L17.125 18.3023C17.0153 18.4393 16.9491 18.6061 16.9349 18.781C16.9208 18.956 16.9593 19.1312 17.0455 19.2841C17.3319 19.7864 18.0182 20.525 18.7796 21.2091C19.6341 21.9819 20.5819 22.6887 21.1819 22.9296C21.3424 22.9952 21.5189 23.0112 21.6887 22.9755C21.8584 22.9399 22.0135 22.8542 22.1341 22.7296L22.7273 22.1319C22.8418 22.019 22.9841 21.9385 23.1398 21.8986C23.2955 21.8586 23.459 21.8607 23.6137 21.9046L26.016 22.5864C26.1485 22.627 26.2699 22.6975 26.3711 22.7923C26.4722 22.887 26.5503 23.0037 26.5994 23.1333C26.6486 23.2629 26.6674 23.4021 26.6545 23.5401C26.6416 23.6781 26.5973 23.8113 26.525 23.9296Z"
+              fill="white"
+            />
+          </symbol>
+          <symbol
+            id="footerViber"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
+              fill="#6F3FAA"
+            />
+            <path
+              d="M31.5523 13.5114V13.4818C31.2841 12.3955 30.5841 11.2727 29.666 10.3273C28.5932 9.21819 27.2273 8.34774 25.9228 8.06592H25.8955C22.0051 7.32047 18.0086 7.32047 14.1182 8.06592H14.091C11.6682 8.59092 9.03868 11.1227 8.45231 13.4818V13.5114C7.73188 16.782 7.73188 20.1703 8.45231 23.4409V23.4682C8.87049 25.15 10.325 26.9182 12.0023 27.9864C12.5501 28.3433 13.1463 28.6197 13.7728 28.8068V31.4387C13.7737 31.649 13.8371 31.8543 13.9551 32.0284C14.0731 32.2025 14.2403 32.3375 14.4353 32.4163C14.6304 32.495 14.8444 32.5139 15.0502 32.4705C15.256 32.4272 15.4443 32.3235 15.591 32.1728L18.2591 29.4C18.8364 29.4318 19.4182 29.45 19.9955 29.45C21.9716 29.4494 23.9432 29.2622 25.8841 28.8909H25.9114C28.3273 28.3637 30.9591 25.8318 31.541 23.4727V23.4455C32.2658 20.1742 32.2697 16.7843 31.5523 13.5114ZM29.441 22.9546C29.05 24.4932 27.0546 26.4091 25.466 26.7614C23.4025 27.1567 21.3025 27.3281 19.2023 27.2727C19.1819 27.2715 19.1614 27.2749 19.1425 27.2828C19.1236 27.2907 19.1067 27.3028 19.0932 27.3182L17.1455 29.3182L15.0728 31.4432C15.0396 31.4783 14.9967 31.5025 14.9496 31.5129C14.9025 31.5233 14.8533 31.5193 14.8085 31.5014C14.7637 31.4835 14.7253 31.4526 14.6982 31.4127C14.6712 31.3727 14.6568 31.3255 14.6569 31.2773V26.9137C14.6569 26.8786 14.6447 26.8446 14.6222 26.8176C14.5998 26.7906 14.5686 26.7723 14.5341 26.7659C14.2028 26.6873 13.8833 26.565 13.5841 26.4023C12.2341 25.6818 10.8728 24.2046 10.5591 22.9546C9.90949 19.9982 9.90949 16.936 10.5591 13.9796C10.9478 12.4477 12.9546 10.5364 14.5319 10.1818C18.1438 9.49073 21.854 9.49073 25.466 10.1818C26.341 10.3773 27.341 11.0432 28.1228 11.8614C28.766 12.5273 29.2591 13.2955 29.441 13.9864C30.0896 16.9406 30.0896 20.0004 29.441 22.9546Z"
+              fill="white"
+            />
+            <path
+              d="M25.5227 23.1818C25.2275 23.8556 24.7198 24.4144 24.0773 24.7727C23.8757 24.8583 23.6664 24.9245 23.4523 24.9704C23.2091 24.8977 22.9773 24.8477 22.7705 24.7591C21.0476 24.0887 19.4438 23.1456 18.0205 21.9659C17.5977 21.6053 17.2005 21.2157 16.8318 20.8C15.9215 19.7516 15.157 18.585 14.5591 17.3318C14.2682 16.7386 14.0227 16.125 13.7727 15.5136C13.5455 14.9568 13.8818 14.3773 14.2273 13.9613C14.5654 13.5756 14.9814 13.2658 15.4477 13.0522C15.6119 12.9698 15.7997 12.9473 15.9786 12.9889C16.1575 13.0304 16.3163 13.1332 16.4273 13.2795C17.008 13.9319 17.5198 14.6425 17.9546 15.4C18.0915 15.6202 18.1384 15.8848 18.0855 16.1387C18.0326 16.3926 17.884 16.6164 17.6705 16.7636C17.5568 16.8432 17.4432 16.9341 17.3455 17.0227C17.2491 17.0941 17.1661 17.1817 17.1 17.2818C17.043 17.3754 17.0085 17.481 16.999 17.5902C16.9895 17.6994 17.0054 17.8093 17.0455 17.9113C17.4841 19.1182 18.15 20.125 19.1455 20.8318C19.4824 21.07 19.8453 21.269 20.2273 21.425C20.4767 21.5606 20.757 21.6295 21.0409 21.625C21.5364 21.5659 21.7 21.0182 22.0455 20.7363C22.204 20.6065 22.4003 20.5313 22.605 20.5219C22.8097 20.5125 23.012 20.5693 23.1818 20.6841C23.55 20.9113 23.9046 21.1682 24.2591 21.4182C24.6098 21.6575 24.9474 21.9154 25.2705 22.1909C25.4216 22.3006 25.5295 22.4598 25.5756 22.6408C25.6217 22.8218 25.603 23.0132 25.5227 23.1818Z"
+              fill="white"
+            />
+            <path
+              d="M20.6523 12.2908H20.3615C20.4546 12.2863 20.5524 12.2908 20.6523 12.2908Z"
+              fill="white"
+            />
+            <path
+              d="M25.6819 19.1022C25.4546 19.1022 25.3433 18.909 25.3273 18.6976C25.2978 18.2817 25.2751 17.8635 25.2183 17.4499C25.12 16.752 24.877 16.0824 24.5046 15.484C24.1219 14.8606 23.6127 14.3245 23.0098 13.9103C22.4069 13.4961 21.7238 13.213 21.0046 13.0794C20.6773 13.0203 20.3433 13.0067 20.0137 12.9726C19.8046 12.9499 19.5296 12.9363 19.4842 12.6772C19.4774 12.6268 19.4814 12.5757 19.496 12.527C19.5105 12.4784 19.5353 12.4334 19.5687 12.3951C19.602 12.3568 19.6432 12.3261 19.6893 12.305C19.7355 12.2838 19.7857 12.2728 19.8364 12.2726C19.8909 12.2695 19.9456 12.2695 20.0001 12.2726C20.9935 12.281 21.9695 12.5343 22.8417 13.01C23.7138 13.4857 24.4552 14.1692 25.0001 14.9999C25.4302 15.6694 25.7223 16.4182 25.8592 17.2022C25.9455 17.6931 25.9773 18.1976 26.016 18.6976C26.0237 18.7466 26.021 18.7967 26.0079 18.8446C25.9949 18.8924 25.9718 18.937 25.9402 18.9752C25.9086 19.0135 25.8692 19.0446 25.8247 19.0665C25.7801 19.0884 25.7315 19.1005 25.6819 19.1022Z"
+              fill="white"
+            />
+            <path
+              d="M24.4523 18.0409C24.451 18.1084 24.4418 18.1756 24.425 18.2409C24.4052 18.3067 24.3655 18.3647 24.3116 18.4071C24.2576 18.4495 24.1919 18.4742 24.1233 18.4779C24.0548 18.4816 23.9868 18.4642 23.9285 18.4279C23.8702 18.3916 23.8246 18.3382 23.7977 18.275C23.7727 18.1833 23.7612 18.0883 23.7636 17.9932C23.7689 17.4849 23.6683 16.981 23.4682 16.5137C23.4227 16.4137 23.3727 16.3114 23.3159 16.2137C22.9906 15.6529 22.5077 15.2001 21.9273 14.9114C21.5771 14.7461 21.2052 14.6313 20.8227 14.5705C20.6545 14.5432 20.4864 14.5273 20.3182 14.5046C20.2744 14.5024 20.2315 14.4912 20.1923 14.4718C20.153 14.4524 20.1181 14.4251 20.0897 14.3917C20.0614 14.3582 20.0402 14.3193 20.0275 14.2774C20.0148 14.2354 20.0109 14.1913 20.0159 14.1478C20.0159 14.1032 20.0254 14.0592 20.0436 14.0186C20.0619 13.9779 20.0885 13.9416 20.1218 13.912C20.155 13.8824 20.1942 13.8601 20.2366 13.8467C20.2791 13.8333 20.3239 13.829 20.3682 13.8341C21.0355 13.8599 21.6893 14.0305 22.2841 14.3341C23.0104 14.6996 23.603 15.285 23.9773 16.0069C24.1881 16.4283 24.3293 16.8812 24.3955 17.3478C24.4077 17.4086 24.4168 17.4701 24.4227 17.5319C24.4341 17.6682 24.4386 17.8046 24.45 17.9728C24.45 17.9887 24.4523 18.0091 24.4523 18.0409Z"
+              fill="white"
+            />
+            <path
+              d="M22.8955 17.7273C22.8827 17.7849 22.8529 17.8374 22.8099 17.8779C22.767 17.9184 22.7129 17.9451 22.6546 17.9546H22.6046C22.5302 17.9594 22.4562 17.9398 22.3938 17.8988C22.3315 17.8578 22.2842 17.7976 22.2592 17.7273C22.245 17.69 22.2359 17.6511 22.2319 17.6114C22.22 17.4585 22.1972 17.3066 22.1637 17.1569C22.0962 16.8538 21.924 16.5842 21.6774 16.3955C21.5581 16.3099 21.4252 16.2453 21.2842 16.2046C21.1046 16.1523 20.916 16.166 20.7387 16.1228C20.6511 16.1072 20.5732 16.0576 20.5221 15.9848C20.471 15.9119 20.4508 15.8218 20.466 15.7341C20.4829 15.6501 20.5299 15.5752 20.5981 15.5233C20.6662 15.4715 20.751 15.4462 20.8365 15.4523C21.8774 15.5273 22.6546 16.0273 22.8546 17.1432C22.8752 17.2468 22.8896 17.3516 22.8978 17.4569C22.9105 17.5466 22.9098 17.6378 22.8955 17.7273Z"
+              fill="white"
+            />
+          </symbol>
+          <symbol
+            id="footerFacebook"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+              fill="#3B5998"
+            />
+            <path
+              d="M25.0281 20.783H21.4594V33.8573H16.0524V20.783H13.4808V16.1882H16.0524V13.2148C16.0524 11.0886 17.0624 7.75903 21.5075 7.75903L25.5126 7.77579V12.2358H22.6067C22.13 12.2358 21.4597 12.474 21.4597 13.4883V16.1925H25.5005L25.0281 20.783Z"
+              fill="white"
+            />
+          </symbol>
+        </svg>
+        <div class="_container container_footer">
+          <div class="footer__block-logo">
+            <div class="footer__block-logo__img">
+              <a href="index.html" target="_blank">
+                <img src="img/logo.svg" width="89" height="60" alt="логотип" />
+              </a>
+            </div>
+            <div class="footer__block-logo__text">
+              <p class="footer__block-logo__text__p">
+                <span class="footer__block-logo__text__strong">
+                  Решение любых проблем <br />
+                </span>
+                с бытовой техники :)
+              </p>
+            </div>
+          </div>
+          <div class="footer__center-text">
+            <p>Все права защищены 2022</p>
+          </div>
+          <div class="footer__block-programs">
+            <div class="footer__block-programs__grid">
+              <a href="tg://resolve?domain=boboevMM">
+                <svg class="footer__icon" style="width: 40px; height: 40px">
+                  <use xlink:href="#footerTelegram"></use>
+                </svg>
+              </a>
+              <a href="https://wa.me/%2B79169480428">
+                <svg class="footer__icon" style="width: 40px; height: 40px">
+                  <use xlink:href="#footerWhatsapp"></use>
+                </svg>
+              </a>
+              <a href="viber://chat?number=%2B79001234567">
+                <svg class="footer__icon" style="width: 40px; height: 40px">
+                  <use xlink:href="#footerViber"></use>
+                </svg>
+              </a>
+              <a href="http://www.facebook.com.vn">
+                <svg class="footer__icon" style="width: 40px; height: 40px">
+                  <use xlink:href="#footerFacebook"></use>
+                </svg>
+              </a>
+              <a href="https://instagram.com/bmuhamad915?igshid=YmMyMTA2M2Y=">
+                <img
+                  src="img/footer-instagram.svg"
+                  width="40"
+                  height="40"
+                  alt="инстаграм"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <!-- <a href="#header" class="popup__close close-popup">X</a> -->
+          <div class="popup__text">
+            <p>Спасибо! В ближайшее время мы с Вами свяжемся.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>
