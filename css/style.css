@@ -2164,6 +2164,13 @@ footer {
   padding: 0;
 }
 
+.main-block__problem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 10px;
+}
+
 .main-block__problem-text {
   margin: 0;
 }

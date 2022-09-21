@@ -138,6 +138,10 @@ $fontTTNormsProBold: "TT Norms Pro Bold";
 .pro_container {
   padding: 0;
 }
+.main-block__problem {
+  display: flex;
+  grid-gap: 10px;
+}
 .main-block__problem-text {
   margin: 0;
 }
